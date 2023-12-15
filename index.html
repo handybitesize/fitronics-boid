@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Boids</title>
+    <script src="./boids.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            background: #282c34;
+            overflow: hidden;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<canvas id="boids" width="150" height="150"></canvas>
+<div class="flex flex-wrap">
+    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500"> <label for="cohesion" class="block mb-2 text-sm font-medium text-white">Cohesion <small>fly to centre</small></label>
+        <input id="cohesion" type="range" min="0" max="0.2" value="0.05" step="0.01" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+    </div>
+    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500"><label for="seperation" class="block mb-2 text-sm font-medium text-white">Seperation <small>avoid others</small></label>
+            <input id="seperation" type="range" min="0.2" max="1" value="0.2" step="0.01" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+    </div>
+    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500">
+        <label for="alignment" class="block mb-2 text-sm font-medium text-white">Alignment <small>match speed</small></label>
+        <input id="alignment" type="range" min="0" max="1" value="0.1" step="0.01" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+    </div>
+
+    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500">
+        <label for="visual" class="block mb-2 text-sm font-medium text-white">Visual Range</label>
+        <input id="visual" type="range" min="0" max="200" value="5" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+    </div>
+    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500">
+        <button id="reset" type="button" class="p-4 rounded-lg shadow-lg text-white">Reset</button>
+        <button id="more" type="button" class="p-4 rounded-lg shadow-lg text-white">More</button>
+        <button id="less" type="button" class="p-4 rounded-lg shadow-lg text-white">Less</button>
+        <button id="trails" type="button" class="p-4 rounded-lg shadow-lg text-white">Trails</button>
+        <button id="colour" type="button" class="p-4 rounded-lg shadow-lg text-white">Colour</button>
+        <button id="pause" type="button" class="p-4 rounded-lg shadow-lg text-white">Pause</button>
+    </div>
+<!--    <div class="grow p-4 rounded-lg shadow-lg bg-slate-500">-->
+<!--        <label for="trails" class="block mb-2 text-sm font-medium text-white">Trails?</label>-->
+<!--        <input type="checkbox" id="trails" checked="true">-->
+<!--    </div>-->
+</div>>
+
+</body>
+</html>
