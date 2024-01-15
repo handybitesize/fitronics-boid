@@ -99,7 +99,6 @@ function flyTowardsCenter(boid) {
 // Move away from other boids that are too close to avoid colliding
 function avoidOthers(boid) {
     const minDistance = 20; // The distance to stay away from other boids
-  //  const avoidFactor = 0.05; // Adjust velocity by this %
     const avoidFactor = settings.seperation/10;
     let moveX = 0;
     let moveY = 0;
@@ -119,7 +118,6 @@ function avoidOthers(boid) {
 // Find the average velocity (speed and direction) of the other boids and
 // adjust velocity slightly to match.
 function matchVelocity(boid) {
-   // const matchingFactor = 0.05; // Adjust by this % of average velocity
     const matchingFactor = settings.alignment/10;
     const visualRange = settings.visual;
     let avgDX = 0;
